@@ -1,0 +1,31 @@
+{
+   "html": {
+      "brace_style": "collapse",
+      "indent_char": " ",
+      "indent_handlebars": true,
+      "indent_scripts": "normal",
+      "indent_size": 3,
+      "max_preserve_newlines": 0,
+      "preserve_newlines": true,
+      "unformatted": ["a", "span", "img", "code", "pre", "sub", "sup", "em", "strong", "b", "i", "u", "strike", "big", "small", "pre", "h1", "h2", "h3", "h4", "h5", "h6"],
+      "wrap_line_length": 0
+   },
+   "css": {
+      "indent_char": " ",
+      "indent_size": 3,
+      "newline_between_rules": true,
+      "selector_separator": " ",
+      "selector_separator_newline": true
+   },
+   "js": {
+      "allowed_file_extensions": ["js", "json", "jshintrc", "jsbeautifyrc"],
+      "brace_style": "collapse-preserve-inline",
+      "indent_size": 3,
+      "indent_char": " ",
+      "indent_level": 0,
+      "indent_with_tabs": false,
+      "preserve_newlines": true,
+      "max_preserve_newlines": 0,
+      "jslint_happy": true
+   }
+}

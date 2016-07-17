@@ -1,0 +1,53 @@
+@import '~styles/theme/variables';
+@import '~bulma/bulma';
+
+.column {
+   flex: 1 1 auto;
+}
+
+.tile {
+   flex: 1 1 auto;
+   min-height: min-content;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+}
+
+.quantico {
+   font-family: 'Quantico', sans-serif;
+}
+
+body * {
+   font-family: 'Roboto', sans-serif;
+}
+
+.is-danger, .is-success, .is-info, .is-warning, .is-dark, .is-primary {
+   a {
+      color: inherit;
+      font-weight: bolder;
+      &:hover {
+         color: inherit;
+      }
+   }
+}
+
+.blue-text {
+   color: $blue !important;
+}
+.red-text {
+   color: $red !important;
+}
+
+.hero.is-light {
+   .title, .subtitle {
+      color: inherit;
+   }
+}
+
+.is-vh-centered {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
