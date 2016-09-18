@@ -16,13 +16,22 @@ const Projects = () => (
          <div className="container">
             <div className="columns is-desktop">
                <div className="column">
-                  <Card title="Sunswift" subtitle="Javascript, full-stack" content="I am creating a rich, versatile and responsive website for Sunswift who build and race record-breaking solar cars in the World Solar Challenge." date="1 Mar 2016 - Present"/>
+                  <Card
+                     image="w4.png"
+                     title="wemyss.github.io" subtitle="#react #webpack #bulma" content="This site! I wanted to make my own website and after lots of mucking about I decided to practice some of my react skills while I am at it." date="1 Jul 2016 - Present"/>
                </div>
                <div className="column">
-                  <Card title="TEDxUNSW" subtitle="Javascript, full-stack" content="Developed with a friend a creative and interesting website for the first ever TEDx event at USNW - The Human Spectrum." date="20 Nov 2015 - Present"/>
+                  <Card
+                     image="eve.jpg"
+                     title="Sunswift"
+                     subtitle="#fullstack #javascript"
+                     content="Developing a robust and responsive website for Sunswift - a dedicated team of UNSW students who build and race record-breaking solar cars in the WSC."
+                     date="1 Mar 2016 - Present"/>
                </div>
                <div className="column">
-                  <Card title="Sunswift" subtitle="Javascript, full-stack" content="I am creating a rich, versatile and responsive website for Sunswift who build and race record-breaking solar cars in the World Solar Challenge." date="1 Mar 2016 - Present"/>
+                  <Card
+                     image="tedx.png"
+                     title="TEDxUNSW" subtitle="#meteor #materialize #heroku" content="Worked with Kirsten Hendriks to develop a creative and interesting website for the first ever TEDx event at UNSW - The Human Spectrum." date="20 Nov 2015 - August 2016"/>
                </div>
             </div>
          </div>
@@ -39,65 +48,68 @@ class Skills extends React.Component {
    render() {
       const fstSkills = [
          {
-            'name': 'Python',
-            'img': 'python.svg'
-         }, {
-            'name': 'Java',
-            'img': 'java.svg'
-         }, {
-            'name': 'HTML, Javascript and CSS',
-            'img': 'htmlJsCss.svg'
-         }, {
-            'name': 'React',
-            'img': 'react.svg'
-         }, {
-            'name': 'Meteor',
-            'img': 'meteor.svg'
-         }, {
             'name': 'Angular 1.x',
             'img': 'angular.svg'
+         }, {
+            'name': 'Bash',
+            'img': 'bash.svg'
+         }, {
+            'name': 'C++',
+            'img': 'cpp.svg'
          }, {
             'name': 'Gulp',
             'img': 'gulp.svg'
          }, {
+            'name': 'HTML, Javascript and CSS',
+            'img': 'htmlJsCss.svg'
+         }, {
+            'name': 'Java',
+            'img': 'java.svg'
+         }, {
+            'name': 'Meteor',
+            'img': 'meteor.svg'
+         }, {
             'name': 'Perl',
             'img': 'perl.svg'
          }, {
-            'name': 'Bash',
-            'img': 'bash.svg'
+            'name': 'Python',
+            'img': 'python.svg'
+         }, {
+            'name': 'React',
+            'img': 'react.svg'
          }
       ];
       const sndSkills = [
          {
-            'name': 'Haskell',
-            'img': 'haskell.svg'
-         }, {
-            'name': 'Django',
-            'img': 'django.svg'
-         }, {
-            'name': 'Jasmine',
-            'img': 'jasmine.svg'
-         }, {
             'name': 'C',
             'img': 'c.svg'
-         }, {
-            'name': 'Postgresql',
-            'img': 'postgresql.svg'
-         }, {
-            'name': 'Groovy',
-            'img': 'groovy.svg'
-         }, {
-            'name': 'NodeJS',
-            'img': 'nodejs.svg'
          }, {
             'name': 'C#',
             'img': 'csharp.svg'
          }, {
-            'name': 'Webpack',
-            'img': 'webpack.svg'
+            'name': 'Django',
+            'img': 'django.svg'
+         }, {
+            'name': 'Groovy',
+            'img': 'groovy.svg'
          }, {
             'name': 'Grunt',
             'img': 'grunt.svg'
+         }, {
+            'name': 'Haskell',
+            'img': 'haskell.svg'
+         }, {
+            'name': 'Jasmine',
+            'img': 'jasmine.svg'
+         }, {
+            'name': 'NodeJS',
+            'img': 'nodejs.svg'
+         }, {
+            'name': 'Postgresql',
+            'img': 'postgresql.svg'
+         }, {
+            'name': 'Webpack',
+            'img': 'webpack.svg'
          }
       ];
       return (
@@ -202,7 +214,7 @@ export default class Home extends React.Component {
          avatar: {
             width: '220px',
             borderRadius: '50%',
-            marginRight: '20px',
+            margin: '0 20px',
             boxShadow: '0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)'
          },
          avatarInfo: {

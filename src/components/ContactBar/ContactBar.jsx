@@ -1,21 +1,21 @@
 import React from 'react';
 import './ContactBar.scss';
 
-const ContactBar = () => (
+const ContactBar = ({urls}) => (
    <section className="hero is-info is-bold is-medium">
       <div className="hero-body">
          <div className="container is-vh-centered icon-bar">
-            <a href="mailto:samuel.wemyss@gmail.com">
+            <a href={ 'mailto:' + 'samuel.wemyss' + '@' + 'gmail.com' }>
             <span className="icon is-large">
                <i className="fa fa-envelope"></i>
             </span>
             </a>
-            <a href="https://github.com/wemyss">
+            <a href={urls.github}>
                <span className="icon is-large">
                   <i className="fa fa-github"></i>
                </span>
             </a>
-            <a href="https://au.linkedin.com/in/samwemyss">
+            <a href={urls.linkedin}>
                <span className="icon is-large">
                   <i className="fa fa-linkedin"></i>
                </span>

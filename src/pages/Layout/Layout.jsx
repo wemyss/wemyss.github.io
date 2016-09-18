@@ -28,11 +28,16 @@ export default class Layout extends React.Component {
          title: 'Sam Wemyss',
          subtitle: 'Software Engineer'
       };
+      const urls = {
+         linkedin: 'https://au.linkedin.com/in/samwemyss',
+         github: 'https://github.com/wemyss'
+      };
+
       return (
          <div>
-            <HeroNav title={route.title} subtitle={route.subtitle}/>
+            <HeroNav title={route.title} subtitle={route.subtitle} urls={urls}/>
             <Home/>
-            <ContactBar/>
+            <ContactBar urls={urls}/>
             <Footer/>
          </div>
       );

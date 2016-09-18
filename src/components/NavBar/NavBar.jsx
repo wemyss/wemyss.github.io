@@ -1,6 +1,5 @@
 import './NavBar.scss';
 import React from 'react';
-import {Link} from 'react-router';
 
 export default class NavBar extends React.Component {
    constructor() {
@@ -29,18 +28,18 @@ export default class NavBar extends React.Component {
          <header className="nav">
             <nav className="container">
                <div className="nav-left">
-                  <Link className="nav-item" to="/">
+                  <div className="nav-item">
                      <h1 className="brand-logo title is-4 quantico">Sam Wemyss</h1>
-                  </Link>
+                  </div>
                </div>
 
                <div className="nav-center">
-                  <a className="nav-item" href="#">
+                  <a className="nav-item" href={this.props.urls.github}>
                      <span className="icon">
                         <i className="fa fa-github"></i>
                      </span>
                   </a>
-                  <a className="nav-item" href="#">
+                  <a className="nav-item" href={this.props.urls.linkedin}>
                      <span className="icon">
                         <i className="fa fa-linkedin"></i>
                      </span>

@@ -1,37 +1,6 @@
 import React from 'react';
 import NavBar from '../NavBar/NavBar';
 
-
-// class HeroNavFooter extends React.Component {
-//    constructor() {
-//       super();
-//    }
-//    render() {
-//       return (
-//          <div className="hero-foot">
-//             <nav className="tabs">
-//                <div className="container">
-//                   <ul>
-//                      <li className="is-active">
-//                         <a>Introduction</a>
-//                      </li>
-//                      <li>
-//                         <a>Projects</a>
-//                      </li>
-//                      <li>
-//                         <a>Work Experience</a>
-//                      </li>
-//                      <li>
-//                         <a>Resume</a>
-//                      </li>
-//                   </ul>
-//                </div>
-//             </nav>
-//          </div>
-//       );
-//    }
-// }
-
 export default class HeroNav extends React.Component {
    constructor() {
       super();
@@ -41,14 +10,14 @@ export default class HeroNav extends React.Component {
    render() {
       const styles = {
          hero: {
-            backgroundImage: 'url(' + require('../../assets/images/sea.jpg') + ')',
+            backgroundImage: 'url(' + require('../../assets/images/hill.jpg') + ')',
             backgroundSize: 'cover'
          }
       };
       return (
          <section className="hero is-dark is-fullheight" style={styles.hero}>
             <div className="hero-head">
-               <NavBar/>
+               <NavBar urls={this.props.urls}/>
             </div>
             <div className="hero-body">
                <div className="container has-text-centered">
