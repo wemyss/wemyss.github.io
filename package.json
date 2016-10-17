@@ -3,16 +3,17 @@
   "description": "My personal website for awesome things",
   "author": "Samuel Wemyss",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/wemyss/wemyss.github.io"
   },
   "scripts": {
     "clean": "node_modules/.bin/rimraf build/",
     "build": "npm run clean && node_modules/.bin/webpack --config webpack/production.config.babel.js",
     "dev-server": "node_modules/.bin/webpack-dev-server --config webpack/development.config.babel.js",
-    "start": "npm run build && node_modules/.bin/http-server build/ -p 9999 -o"
+    "start": "npm run build && node_modules/.bin/http-server build/ -p 9999 -o",
+    "deploy": "./build-for-deployment.sh && git push"
   },
   "devDependencies": {
     "babel": "^6.5.2",

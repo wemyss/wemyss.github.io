@@ -24,4 +24,9 @@ const ContactBar = ({urls}) => (
       </div>
    </section>
 );
+
+ContactBar.propTypes = {
+   urls: React.PropTypes.objectOf(React.PropTypes.string).isRequired
+};
+
 export default ContactBar;

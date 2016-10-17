@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from '../NavBar/NavBar';
 
-export default class HeroNav extends React.Component {
+class HeroNav extends React.Component {
    constructor() {
       super();
       this.render = this.render.bind(this);
@@ -33,3 +33,11 @@ export default class HeroNav extends React.Component {
       );
    }
 }
+
+HeroNav.propTypes = {
+   urls: React.PropTypes.objectOf(React.PropTypes.string).isRequired,
+   title: React.PropTypes.string.isRequired,
+   subtitle: React.PropTypes.string.isRequired
+};
+
+export default HeroNav;

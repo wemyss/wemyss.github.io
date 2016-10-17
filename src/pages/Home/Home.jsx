@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router';
 import Card from '../../components/Card/Card';
 import './Home.scss';
 
@@ -8,6 +7,47 @@ const HeroHeadTitle = ({title}) => (
       <h2 className="title is-1 quantico"><br/>{title}</h2>
    </div>
 );
+
+class Intro extends React.Component {
+   constructor() {
+      super();
+      this.render = this.render.bind(this);
+   }
+
+   render() {
+      const styles = {
+         avatar: {
+            width: '220px',
+            borderRadius: '50%',
+            margin: '0 20px',
+            boxShadow: '0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)'
+         },
+         avatarInfo: {
+            lineHeight: '1.5'
+         }
+      };
+
+      return (
+         <section className="section is-medium">
+            <div className="container">
+               <div className="columns is-vcentered">
+                  <div className="column is-narrow has-text-centered">
+                     <img style={styles.avatar} src={require('../../assets/images/samW.jpg')} alt="A picture of me!"/>
+                  </div>
+                  <div className="column">
+                     <h2 className="title is-4" style={styles.avatarInfo}>
+                        Hey there! I am a Software Engineer studying at <strong className="blue-text">UNSW</strong>. Originally from a cattle farm in south-western NSW, I moved to Sydney to pursue what I enjoy the most - <strong className="blue-text">Problem Solving</strong>.
+                        <br/>
+                        <br/>
+                        I love building, breaking and fixing things - which is programming in a nutshell really, and there's always new and different problems to solve which is awesome!
+                     </h2>
+                  </div>
+               </div>
+            </div>
+         </section>
+      );
+   }
+}
 
 const Projects = () => (
    <section className="hero is-light is-medium">
@@ -18,7 +58,11 @@ const Projects = () => (
                <div className="column">
                   <Card
                      image="w4.png"
-                     title="wemyss.github.io" subtitle="#react #webpack #bulma" content="This site! I wanted to make my own website and after lots of mucking about I decided to practice some of my react skills while I am at it." date="1 Jul 2016 - Present"/>
+                     title="wemyss.github.io"
+                     subtitle="#react #webpack #bulma"
+                     content="This site! I wanted to make my own website and after lots of mucking about I decided to practice some of my react skills while I am at it."
+                     date="1 Jul 2016 - Present"
+                     url={window.location.href}/>
                </div>
                <div className="column">
                   <Card
@@ -26,12 +70,17 @@ const Projects = () => (
                      title="Sunswift"
                      subtitle="#fullstack #javascript"
                      content="Developing a robust and responsive website for Sunswift - a dedicated team of UNSW students who build and race record-breaking solar cars in the WSC."
-                     date="1 Mar 2016 - Present"/>
+                     date="1 Mar 2016 - Present"
+                     url="http://sunswift.com"/>
                </div>
                <div className="column">
                   <Card
                      image="tedx.png"
-                     title="TEDxUNSW" subtitle="#meteor #materialize #heroku" content="Worked with Kirsten Hendriks to develop a creative and interesting website for the first ever TEDx event at UNSW - The Human Spectrum." date="20 Nov 2015 - August 2016"/>
+                     title="TEDxUNSW"
+                     subtitle="#meteor #materialize #heroku"
+                     content="Worked with Kirsten Hendriks to develop a creative and interesting website for the first ever TEDx event at UNSW - The Human Spectrum."
+                     date="20 Nov 2015 - August 2016"
+                     url="http://tedxunsw.com"/>
                </div>
             </div>
          </div>
@@ -147,6 +196,7 @@ class Skills extends React.Component {
       );
    }
 }
+
 const Hobbies = () => (
    <section className="hero is-light is-medium">
       <HeroHeadTitle title="Hobbies"/>
@@ -202,49 +252,12 @@ const Hobbies = () => (
    </section>
 );
 
-export default class Home extends React.Component {
-   constructor() {
-      super();
-      this.render = this.render.bind(this);
-   }
-
-   render() {
-
-      const styles = {
-         avatar: {
-            width: '220px',
-            borderRadius: '50%',
-            margin: '0 20px',
-            boxShadow: '0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)'
-         },
-         avatarInfo: {
-            lineHeight: '1.5'
-         }
-      };
-
-      return (
-         <main>
-            <section className="section is-medium">
-               <div className="container">
-                  <div className="columns is-vcentered">
-                     <div className="column is-narrow has-text-centered">
-                        <img style={styles.avatar} src={require('../../assets/images/samW.jpg')} alt="A picture of me!"/>
-                     </div>
-                     <div className="column">
-                        <h2 className="title is-4" style={styles.avatarInfo}>
-                           Hey there! I am a Software Engineer studying at <strong className="blue-text">UNSW</strong>. Originally from a cattle farm in south-western NSW, I moved to Sydney to pursue what I enjoy the most - <strong className="blue-text">Problem Solving</strong>.
-                           <br/>
-                           <br/>
-                           I love building, breaking and fixing things - which is programming in a nutshell really, and there's always new and different problems to solve which is awesome!
-                        </h2>
-                     </div>
-                  </div>
-               </div>
-            </section>
-            <Projects/>
-            <Skills/>
-            <Hobbies/>
-         </main>
-      );
-   }
-}
+const Home = () => (
+   <main>
+      <Intro/>
+      <Projects/>
+      <Skills/>
+      <Hobbies/>
+   </main>
+);
+export default Home;
