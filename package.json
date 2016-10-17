@@ -13,7 +13,7 @@
     "build": "npm run clean && node_modules/.bin/webpack --config webpack/production.config.babel.js",
     "dev-server": "node_modules/.bin/webpack-dev-server --config webpack/development.config.babel.js",
     "start": "npm run build && node_modules/.bin/http-server build/ -p 9999 -o",
-    "deploy": "./build-for-deployment.sh && git push"
+    "build-prod": "./build-for-deployment.sh"
   },
   "devDependencies": {
     "babel": "^6.5.2",
