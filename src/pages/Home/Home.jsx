@@ -97,9 +97,6 @@ class Skills extends React.Component {
    render() {
       const fstSkills = [
          {
-            'name': 'Angular 1.x',
-            'img': 'angular.svg'
-         }, {
             'name': 'Bash',
             'img': 'bash.svg'
          }, {
@@ -130,6 +127,9 @@ class Skills extends React.Component {
       ];
       const sndSkills = [
          {
+            'name': 'Angular 1.x',
+            'img': 'angular.svg'
+         }, {
             'name': 'C',
             'img': 'c.svg'
          }, {
