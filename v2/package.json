@@ -1,0 +1,32 @@
+{
+  "name": "v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf dist/ && mkdir dist/",
+    "build": "npm run clean; run-p -s build-styles build-html; npm run minify-css",
+    "build-html": "pug src/pug/pages/*.pug -o dist",
+    "build-styles": "sass -I node_modules src/styles/index.sass:dist/index.css --style compressed",
+    "minify-css": "postcss --use autoprefixer -b 'last 2 versions' -o dist/index.css dist/index.css && cssnano dist/index.css dist/index.css",
+    "prestart": "npm run clean",
+    "start": "run-p -s watch-* start-server",
+    "start-server": "browser-sync start --server 'dist' --files 'dist'",
+    "watch-html": "npm run build-html -- -wP",
+    "watch-styles": "sass -I node_modules --watch src/styles:dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "latest",
+    "pug-cli": "latest",
+    "browser-sync": "latest",
+    "cssnano-cli": "latest",
+    "npm-run-all": "latest",
+    "postcss-cli": "latest"
+  },
+  "dependencies": {
+    "bulma": "latest"
+  }
+}

@@ -1,0 +1,11 @@
+block variables
+
+html
+	head
+		title #{title}
+		each val, key in site
+			meta(property = 'og:' + key , content = val)
+		link(href='index.css', rel='stylesheet')
+
+	body
+		block content
