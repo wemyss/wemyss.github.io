@@ -1,0 +1,10 @@
+{
+	[
+		{
+			"title": "First ever blog",
+			"slug": "first-ever-blog",
+			"cover": "test.jpg",
+			"date": "1234"
+		}
+	]
+}

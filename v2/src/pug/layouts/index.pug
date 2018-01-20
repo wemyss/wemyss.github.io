@@ -3,9 +3,17 @@ block variables
 html
 	head
 		title #{title}
+		script(src='https://use.fontawesome.com/ea44713eda.js')
+		link(href='https://fonts.googleapis.com/css?family=Indie+Flower', rel='stylesheet')
+
 		each val, key in site
 			meta(property = 'og:' + key , content = val)
 		link(href='index.css', rel='stylesheet')
 
+	header.nav-fixed
+		include navbar.pug
+
 	body
 		block content
+
+		script(src='index.js')
