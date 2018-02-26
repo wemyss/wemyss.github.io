@@ -1,7 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-import Header from '../components/Header'
+import './index.scss'
+// import Header from '../components/Header'
 
 const IndexPage = () => (
   <section className="homepage">

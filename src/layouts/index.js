@@ -9,7 +9,7 @@ import './bulma.scss'
 import './index.scss'
 
 const TemplateWrapper = ({ children }) => (
-  <div>
+  <main>
     <Helmet
       title="Sam Wemyss"
       meta={[
@@ -17,10 +17,8 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'software developer, student, javascript, programming' },
       ]}
     />
-    <main>
-      {children()}
-    </main>
-  </div>
+    {children()}
+  </main>
 )
 
 TemplateWrapper.propTypes = {

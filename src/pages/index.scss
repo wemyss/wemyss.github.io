@@ -1,0 +1,75 @@
+// FIXME: Only import the mixins etc
+@import "node_modules/bulma/bulma.sass";
+
+
+.homepage {
+	background-image: url(../pages/assets/home.jpg);
+	background-size: cover;
+	background-position: center right;
+	height: 100vh;
+	width: 100vw;
+
+	display: flex;
+	flex-direction: column;
+
+	padding: 16px 32px 8px;
+}
+
+.site-links {
+	margin-top: 25vh;
+	margin-bottom: auto;
+
+	li {
+		margin-top: 8px;
+
+		a {
+			position: relative;
+		}
+
+		&:first-child a::before {
+			content: '';
+			width: 110px;
+			height: 1px;
+			position: absolute;
+			right: 0;
+			background-color: white;
+			top: -8px;
+
+			@include mobile {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+}
+
+// .header {
+// 	.title {
+// 		font-family: 'Bungee Shade', cursive;
+// 	}
+// 	.subtitle {
+// 		letter-spacing: 2px;
+// 		padding-top: 4px;
+// 	}
+// }
+
+// Cuz fluid doesn't stay same size below 1024px...
+// .container.is-fluid {
+// 	margin-left: 32px;
+// 	margin-right: 32px;
+// 	max-width: none;
+// 	width: auto;
+// }
+
+.icon.is-hoverable {
+	opacity: .6;
+	cursor: pointer;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.social span {
+	margin: 0 8px;
+}
