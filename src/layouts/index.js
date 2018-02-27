@@ -3,9 +3,6 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import './fontawesome-all.js'
-
-// Import stylesheets
-import './bulma.scss'
 import './index.scss'
 
 const TemplateWrapper = ({ children }) => (
