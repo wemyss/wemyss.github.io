@@ -1,13 +1,17 @@
 import React from 'react'
+import Link from 'gatsby-link'
+
+import deadLink from './assets/dead-link.png'
 
 const NotFoundPage = () => (
   <div className="section has-text-centered">
     <div className="container">
-       <h1 className="title">Error 404</h1>
-       <figure className="image">
-        <img src="https://img.fireden.net/vg/image/1506/88/1506881244676.png" alt=""/>
-       </figure>
-      <h2 className="subtitle">You found a dead link</h2>
+			<h1 className="title">Error 404</h1>
+			<figure>
+				<img src={deadLink} width="404" alt="Dead Link"/>
+			</figure>
+      <h2 className="subtitle">Oops... you found a dead Link</h2>
+    	<Link className="button is-primary" to="/">Save And Continue</Link>
     </div>
   </div>
 )
