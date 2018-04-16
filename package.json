@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "dependencies": {
     "bulma": "^0.6.2",
-    "gatsby": "^1.9.204",
+    "gatsby": "^1.9.250",
     "gatsby-link": "^1.6.37",
     "gatsby-plugin-react-helmet": "^2.0.5",
     "gatsby-plugin-sass": "^1.0.17",
