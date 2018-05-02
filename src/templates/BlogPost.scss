@@ -1,0 +1,20 @@
+@import "node_modules/bulma/sass/utilities/initial-variables.sass";
+
+.blog-post {
+	font-size: 1.3rem;
+	max-width: 980px;
+	margin: 0 auto;
+	color: $white-ter;
+
+	pre {
+		margin-bottom: 3rem;
+		font-size: 1rem;
+	}
+	strong {
+		color: $grey-lighter;
+	}
+}
+
+.blog-post-wrapper {
+	background-color: $grey-dark;
+}

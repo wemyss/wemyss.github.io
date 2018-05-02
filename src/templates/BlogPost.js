@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './BlogPost.scss'
+
 export default function Template({
 	data, // this prop will be injected by the GraphQL query below.
 }) {
@@ -8,19 +10,22 @@ export default function Template({
 
 	return (
 		<main>
-			<div className="hero is-medium is-info">
-				<div className="hero-body">
-					<h1 className='title'>{frontmatter.title}</h1>
-					<h2 className='subtitle'>{frontmatter.date}</h2>
+			<div className='hero is-medium is-info is-bold'>
+				<div className='hero-body'>
+					<div className='section'>
+						<div className='container'>
+							<h1 className='title'>{frontmatter.title}</h1>
+							<h2 className='subtitle'>{frontmatter.date}</h2>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div className='section'>
-			<div className='container'>
-				<div className='content' dangerouslySetInnerHTML={{ __html: html }} />
+			<div className='section blog-post-wrapper'>
+				<div className='container'>
+					<div className='content blog-post' dangerouslySetInnerHTML={{ __html: html }} />
+				</div>
 			</div>
-		</div>
 		</main>
-
 	)
 }
 

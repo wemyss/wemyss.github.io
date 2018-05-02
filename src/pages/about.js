@@ -37,13 +37,13 @@ const GrowingUpSection = () => (
 )
 
 const DayToDaySection = () => (
-	<div className="hero is-primary is-bold">
+	<div className="hero is-warning is-bold">
 		<div className="hero-body has-text-centered">
 			<div className="columns">
 				<div className="column is-6 is-offset-3">
 					<div className="section">
 						<p className="subtitle is-4 lh-about">
-							Day to day I like to hack away at side projects to pick up new skills, sharpen old ones, or maybe just for a little bit of fun...
+							Day to day I like to hack away at side projects to pick up new skills, try out an idea, or even just have some fun...
 						</p>
 					</div>
 				</div>
@@ -73,7 +73,7 @@ const GetInTouchSection = () => (
 		<div className="hero-body has-text-centered">
 			<div className="columns">
 				<div className="column is-8 is-offset-2">
-						<p className="subtitle lh-about">
+						<p className="subtitle is-4 lh-about">
 							If you want to get in touch - just click on one of the links below. 👍
 							<br/>Otherwise have a great day!
 						</p>

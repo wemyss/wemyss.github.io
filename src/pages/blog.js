@@ -4,7 +4,7 @@ import PostLink from '../components/PostLink'
 const BlogPage = ({ data: { allMarkdownRemark: { edges } } }) => {
 	const Posts = edges
 		.filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-		.map(edge => <li className="box"><PostLink key={edge.node.id} post={edge.node} /></li>)
+		.map(edge => <li key={edge.node.id} className="box"><PostLink post={edge.node} /></li>)
 
 	return (
 		<main className="section">
