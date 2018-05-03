@@ -1,31 +1,35 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import PropTypes from 'prop-types'
+import { string } from 'prop-types'
+
+const HeaderItem = ({ icon, title, to }) => (
+		<Link to={to} className='navbar-item'>
+			{icon &&
+				<span className="icon has-text-white">
+					<i className={icon} />
+				</span>
+			}
+			<h2>{title}</h2>
+		</Link>
+)
+HeaderItem.propTypes = {
+	icon: string,
+	title: string.isRequired,
+	to: string.isRequired,
+}
+
 
 const Header = ({ title }) => (
-	<nav className="navbar is-dark has-shadow">
-		<div className="navbar-brand">
-			<Link to="/" className="navbar-item">
-				<span className="icon has-text-white">
-					<i className="fas fa-home" alt="Take me home"></i>
-				</span>
-			</Link>
-		</div>
-		<div className="navbar-menu">
-			<div className="navbar-end">
-				<Link to="about" className="navbar-item">
-					About
-				</Link>
-				<Link to="blog" className="navbar-item">
-					Blog
-				</Link>
+	<nav className='navbar is-dark has-shadow'>
+			<div className='navbar-start navbar-end navbar-brand'>
+				<HeaderItem to='/' 			title='Home'/>
+				<HeaderItem to='about' 	title='About'/>
+				<HeaderItem to='blog' 	title='Blog'/>
 			</div>
-		</div>
 	</nav>
 )
-
 Header.propTypes = {
-	title: PropTypes.string,
+	title: string,
 }
 
 export default Header

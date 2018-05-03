@@ -7,7 +7,7 @@ import './assets/fontawesome-all.js'
 import './assets/audiowide.css'
 import './index.scss'
 
-import 'prismjs/themes/prism-tomorrow.css'
+import 'prismjs/themes/prism.css'
 
 const TemplateWrapper = ({ location, children }) => (
 	<main>

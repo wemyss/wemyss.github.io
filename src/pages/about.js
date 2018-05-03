@@ -37,7 +37,7 @@ const GrowingUpSection = () => (
 )
 
 const DayToDaySection = () => (
-	<div className="hero is-warning is-bold">
+	<div className="hero is-primary is-bold">
 		<div className="hero-body has-text-centered">
 			<div className="columns">
 				<div className="column is-6 is-offset-3">

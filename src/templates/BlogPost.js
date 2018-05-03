@@ -10,7 +10,7 @@ export default function Template({
 
 	return (
 		<main>
-			<div className='hero is-medium is-info is-bold'>
+			<div className='hero is-medium is-primary is-bold'>
 				<div className='hero-body'>
 					<div className='section'>
 						<div className='container'>
@@ -20,7 +20,7 @@ export default function Template({
 					</div>
 				</div>
 			</div>
-			<div className='section blog-post-wrapper'>
+			<div className='section'>
 				<div className='container'>
 					<div className='content blog-post' dangerouslySetInnerHTML={{ __html: html }} />
 				</div>
