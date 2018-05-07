@@ -3,14 +3,14 @@ import Link from 'gatsby-link'
 import { string } from 'prop-types'
 
 const HeaderItem = ({ icon, title, to }) => (
-		<Link to={to} className='navbar-item'>
-			{icon &&
-				<span className="icon has-text-white">
-					<i className={icon} />
-				</span>
-			}
-			<h2>{title}</h2>
-		</Link>
+	<Link to={to} className='navbar-item'>
+		{icon &&
+			<span className='icon has-text-white'>
+				<i className={icon} />
+			</span>
+		}
+		<h2>{title}</h2>
+	</Link>
 )
 HeaderItem.propTypes = {
 	icon: string,
@@ -21,11 +21,11 @@ HeaderItem.propTypes = {
 
 const Header = ({ title }) => (
 	<nav className='navbar is-dark has-shadow'>
-			<div className='navbar-start navbar-end navbar-brand'>
-				<HeaderItem to='/' 			title='Home'/>
-				<HeaderItem to='about' 	title='About'/>
-				<HeaderItem to='blog' 	title='Blog'/>
-			</div>
+		<div className='navbar-start navbar-end navbar-brand'>
+			<HeaderItem to='/' 			title='Home'/>
+			<HeaderItem to='about' 	title='About'/>
+			<HeaderItem to='blog' 	title='Blog'/>
+		</div>
 	</nav>
 )
 Header.propTypes = {

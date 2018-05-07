@@ -11,6 +11,7 @@ $success: #78e08f;
 	background-image: url(../pages/assets/home.jpg);
 	background-size: cover;
 	background-position: center right;
+	background-color: #5684d9;
 	height: 100vh;
 	width: 100vw;
 
@@ -28,6 +29,7 @@ $success: #78e08f;
 .site-links {
 	margin-top: 25vh;
 	margin-bottom: auto;
+	font-size: 1.1rem;
 
 	li {
 		margin-top: 8px;
@@ -50,6 +52,10 @@ $success: #78e08f;
 				transform: translateX(-50%);
 			}
 		}
+	}
+
+	@include mobile {
+		margin-top: 2.5rem;
 	}
 }
 

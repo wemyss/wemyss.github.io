@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "dependencies": {
     "bulma": "^0.6.2",
-    "gatsby": "^1.9.250",
+    "gatsby": "^1.9.259",
     "gatsby-cli": "^1.1.51",
     "gatsby-link": "^1.6.37",
     "gatsby-plugin-react-helmet": "^2.0.5",
@@ -23,11 +23,13 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "gh-pages": "^1.1.0",
     "prettier": "^1.10.2"
   }
 }

@@ -9,16 +9,21 @@ import './index.scss'
 
 import 'prismjs/themes/prism.css'
 
+const urls_without_nav = new Set([
+	'/',
+	'/404/'
+])
+
 const TemplateWrapper = ({ location, children }) => (
 	<main>
 		<Helmet
-			title="Sam Wemyss"
+			title='Sam Wemyss'
 			meta={[
 				{ name: 'description', content: 'Personal website for Sam Wemyss' },
 				{ name: 'keywords', content: 'software developer, student, javascript, programming' },
 			]}
 		/>
-		{location.pathname !== '/' ? <Header title={location.pathname} /> : ''}
+		{urls_without_nav.has(location.pathname)  ? '' : <Header title={location.pathname} />}
 		{children()}
 	</main>
 )

@@ -3,24 +3,22 @@ import PostLink from '../components/PostLink'
 
 const BlogPage = ({ data: { allMarkdownRemark: { edges } } }) => {
 	const Posts = edges
-		.filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+		.filter(edge => !!edge.node.frontmatter.date)
 		.map(edge => <li key={edge.node.id} className='box is-dark'><PostLink post={edge.node} /></li>)
 
 	return (
-		<div>
-
-
-		<div className="hero is-warning is-bold is-medium">
-			<div className="hero-body has-text-centered">
-				<h1 className="title is-2">Blog posts</h1>
+		<main>
+			<div className='hero is-warning is-bold is-medium'>
+				<div className='hero-body has-text-centered'>
+					<h1 className='title is-2'>Blog posts</h1>
+				</div>
 			</div>
-		</div>
-		<section className='section'>
-			<div className='container' style={{ maxWidth: '980px' }}>
-				<ul>{Posts}</ul>
-			</div>
-		</section>
-		</div>
+			<section className='section'>
+				<div className='container' style={{ maxWidth: '980px' }}>
+					<ul>{Posts}</ul>
+				</div>
+			</section>
+		</main>
 	)
 }
 
