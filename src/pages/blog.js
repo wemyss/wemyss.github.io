@@ -8,7 +8,7 @@ const BlogPage = ({ data: { allMarkdownRemark: { edges } } }) => {
 
 	return (
 		<main>
-			<div className='hero is-warning is-bold is-medium'>
+			<div className='hero is-primary is-bold is-medium'>
 				<div className='hero-body has-text-centered'>
 					<h1 className='title is-2'>Blog posts</h1>
 				</div>

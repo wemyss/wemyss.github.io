@@ -19,10 +19,10 @@ const IndexPage = () => (
 		<nav className='site-links has-text-centered has-text-right-tablet'>
 			<ul>
 				<li>
-					<Link className='has-text-grey-lighter' to='about'>About</Link>
+					<Link className='has-text-grey-lighter' to='/about'>About</Link>
 				</li>
 				<li>
-					<Link className='has-text-grey-lighter' to='blog'>Blog</Link>
+					<Link className='has-text-grey-lighter' to='/blog'>Blog</Link>
 				</li>
 			</ul>
 		</nav>

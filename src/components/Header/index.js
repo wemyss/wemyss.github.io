@@ -22,9 +22,9 @@ HeaderItem.propTypes = {
 const Header = ({ title }) => (
 	<nav className='navbar is-dark has-shadow'>
 		<div className='navbar-start navbar-end navbar-brand'>
-			<HeaderItem to='/' 			title='Home'/>
-			<HeaderItem to='about' 	title='About'/>
-			<HeaderItem to='blog' 	title='Blog'/>
+			<HeaderItem to='/' title='Home'/>
+			<HeaderItem to='/about' title='About'/>
+			<HeaderItem to='/blog' title='Blog'/>
 		</div>
 	</nav>
 )
