@@ -40,13 +40,13 @@ export const pageQuery = graphql`
 						title
 						blurb
 						image {
-              publicURL
-              childImageSharp {
-                fluid(maxWidth: 256) {
-                  originalImg
-                }
-              }
-            }
+							publicURL
+							childImageSharp {
+								fluid(maxWidth: 256) {
+									originalImg
+								}
+							}
+						}
 					}
 				}
 			}
