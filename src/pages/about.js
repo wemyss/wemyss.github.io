@@ -1,6 +1,8 @@
 import React from 'react'
 
+import Layout from '../components/Layout'
 import Contact from '../components/Contact'
+
 import './about.scss'
 
 const IntroSection = () => (
@@ -8,7 +10,7 @@ const IntroSection = () => (
 		<div className='hero-body'>
 			<div className='columns is-vcentered'>
 				<div className='column is-4 has-text-centered'>
-					<img className='avatar image-floating' src={require('./assets/about/samW.jpg')} alt='A picture of me!'/>
+					<img className='avatar image-floating' src={require('./assets/about/samW.jpg')} alt='Sam Wemyss'/>
 				</div>
 				<div className='column is-7'>
 					<p className='subtitle is-4 lh-about'>
@@ -57,7 +59,7 @@ const SpareTimeSection = () => (
 		<div className='hero-body'>
 			<div className='columns is-vcentered section'>
 				<div className='column is-5 is-offset-1'>
-					<img src={require('./assets/about/redtarn-mtcook.jpg')} alt='Red tarn, Mt Cook, New Zealand' className='image-floating'/>
+					<img src={require('./assets/about/redtarn-mtcook.jpg')} alt='The Red Tarn at Mt Cook, New Zealand, 2018' className='image-floating'/>
 				</div>
 				<div className='column is-4 is-offset-1'>
 					<p className='subtitle lh-about'>In my spare time I like going on hikes in the mountains, play video games and do something other than uni work 😊. Other random things I enjoy include archery, snowboarding and gardening.</p>
@@ -84,8 +86,8 @@ const GetInTouchSection = () => (
 )
 
 
-const AboutPage = () => (
-	<main>
+export default () => (
+	<Layout>
 		<section className='hero is-primary is-bold is-medium'>
 			<div className='hero-body has-text-centered'>
 				<h1 className='title is-2'>About me</h1>
@@ -97,7 +99,5 @@ const AboutPage = () => (
 		<SpareTimeSection />
 		<GetInTouchSection />
 		<Contact />
-	</main>
+	</Layout>
 )
-
-export default AboutPage

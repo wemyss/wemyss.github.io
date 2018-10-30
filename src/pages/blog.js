@@ -1,13 +1,16 @@
 import React from 'react'
+import { graphql } from 'gatsby'
+
+import Layout from '../components/Layout'
 import PostLink from '../components/PostLink'
 
-const BlogPage = ({ data: { allMarkdownRemark: { edges } } }) => {
+export default ({ data: { allMarkdownRemark: { edges } } }) => {
 	const Posts = edges
 		.filter(edge => !!edge.node.frontmatter.date)
 		.map(edge => <li key={edge.node.id} className='box is-dark'><PostLink post={edge.node} /></li>)
 
 	return (
-		<main>
+		<Layout>
 			<div className='hero is-primary is-bold is-medium'>
 				<div className='hero-body has-text-centered'>
 					<h1 className='title is-2'>Blog posts</h1>
@@ -18,12 +21,9 @@ const BlogPage = ({ data: { allMarkdownRemark: { edges } } }) => {
 					<ul>{Posts}</ul>
 				</div>
 			</section>
-		</main>
+		</Layout>
 	)
 }
-
-export default BlogPage
-
 
 export const pageQuery = graphql`
 	query IndexQuery {
@@ -34,13 +34,19 @@ export const pageQuery = graphql`
 			edges {
 				node {
 					id
-					excerpt(pruneLength: 250)
 					frontmatter {
 						date(formatString: "MMMM DD, YYYY")
 						path
 						title
 						blurb
-						image
+						image {
+              publicURL
+              childImageSharp {
+                fluid(maxWidth: 256) {
+                  originalImg
+                }
+              }
+            }
 					}
 				}
 			}

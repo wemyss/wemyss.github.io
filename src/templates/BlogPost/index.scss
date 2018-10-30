@@ -1,7 +1,7 @@
 @import "node_modules/bulma/sass/utilities/initial-variables.sass";
 
-.blog-post {
-	font-size: 1.3rem;
+#blog-post {
+	font-size: 1.25rem;
 	max-width: 980px;
 	margin: 0 auto;
 
@@ -10,5 +10,12 @@
 		font-size: 1rem;
 	}
 
+	h1:not(:first-child) {
+		margin-top: 5rem
+	}
+
+	h4 {
+		margin-top: 3rem
+	}
 }
 

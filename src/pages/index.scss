@@ -20,10 +20,6 @@ $success: #78e08f;
 
 	padding: 16px 32px 8px;
 	font-family: 'Audiowide', cursive;
-
-	h1 {
-		font-family: 'Audiowide', cursive;
-	}
 }
 
 .site-links {
@@ -59,24 +55,6 @@ $success: #78e08f;
 	}
 }
 
-// .header {
-// 	.title {
-// 		font-family: 'Bungee Shade', cursive;
-// 	}
-// 	.subtitle {
-// 		letter-spacing: 2px;
-// 		padding-top: 4px;
-// 	}
-// }
-
-// Cuz fluid doesn't stay same size below 1024px...
-// .container.is-fluid {
-// 	margin-left: 32px;
-// 	margin-right: 32px;
-// 	max-width: none;
-// 	width: auto;
-// }
-
 .icon.is-hoverable {
 	opacity: .6;
 	cursor: pointer;
@@ -90,8 +68,6 @@ $success: #78e08f;
 	margin: 0 8px;
 }
 
-
-
 .image-floating, .blog-post pre {
   border-radius: 2px;
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
@@ -99,4 +75,20 @@ $success: #78e08f;
 
 .navbar-item {
 	padding: 0.5rem 2rem;
+}
+
+
+// fix bulma interaction with prismjs
+.content .tag, .content .number {
+  display: inline;
+  padding: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  vertical-align: inherit;
+  border-radius: inherit;
+  font-weight: inherit;
+  white-space: inherit;
+  background: inherit;
+  margin: inherit;
 }

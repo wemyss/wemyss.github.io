@@ -1,14 +1,17 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import './PostLink.scss'
 import testimg from '../pages/assets/128x128.png'
 
-const PostLink = ({ post }) => (
+const PostLink = ({ post, ...rest }) => {
+	console.log(post, rest)
+	return (
 	<Link to={post.frontmatter.path}>
 		<div className='media'>
 			<div className='media-left'>
-				<figure className='image is-128x128'>
-					<img src={post.frontmatter.image || testimg} alt=''/>
+				<figure className='image is-128x128 is-flex postlink-img'>
+					<img src={post.frontmatter.image ? post.frontmatter.image.publicURL : testimg} alt=''/>
 				</figure>
 			</div>
 			<div className='media-content'>
@@ -20,7 +23,7 @@ const PostLink = ({ post }) => (
 			</div>
 		</div>
 	</Link>
-)
+)}
 
 // TODO: proptypes
 

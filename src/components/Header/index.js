@@ -2,6 +2,8 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { string } from 'prop-types'
 
+import './index.scss'
+
 const HeaderItem = ({ icon, title, to }) => (
 	<Link to={to} className='navbar-item'>
 		{icon &&

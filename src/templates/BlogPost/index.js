@@ -1,6 +1,10 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 
-import './BlogPost.scss'
+import Layout from '../../components/Layout'
+
+import './index.scss'
+
 
 export default function Template({
 	data, // this prop will be injected by the GraphQL query below.
@@ -9,7 +13,7 @@ export default function Template({
 	const { frontmatter, html } = markdownRemark
 
 	return (
-		<main>
+		<Layout>
 			<div className='hero is-medium is-primary is-bold'>
 				<div className='hero-body'>
 					<div className='section'>
@@ -22,10 +26,10 @@ export default function Template({
 			</div>
 			<div className='section'>
 				<div className='container'>
-					<div className='content blog-post' dangerouslySetInnerHTML={{ __html: html }} />
+					<div id='blog-post' className='content' dangerouslySetInnerHTML={{ __html: html }} />
 				</div>
 			</div>
-		</main>
+		</Layout>
 	)
 }
 
