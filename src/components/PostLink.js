@@ -4,9 +4,7 @@ import Link from 'gatsby-link'
 import './PostLink.scss'
 import testimg from '../pages/assets/128x128.png'
 
-const PostLink = ({ post, ...rest }) => {
-	console.log(post, rest)
-	return (
+const PostLink = ({ post }) => (
 	<Link to={post.frontmatter.path}>
 		<div className='media'>
 			<div className='media-left'>
@@ -23,7 +21,7 @@ const PostLink = ({ post, ...rest }) => {
 			</div>
 		</div>
 	</Link>
-)}
+)
 
 // TODO: proptypes
 
